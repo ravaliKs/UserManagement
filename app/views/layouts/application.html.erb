@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserManagementSystem</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <header></header>
+  <ul>
+  <li><a href="/users/sign_in">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+    <% if user_signed_in?%>
+  <li><a href="/signout",id="logout">Logout</a></li>
+    <%end%>
+</ul>
+  </header>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+<footer>
+  <p>Posted by: Ravali Karumuri</p>
+  <p>Contact information: <a href="mailto:ravalik@example.com">
+    ravalik@example.com</a>.</p>
+</footer>
+</body>
+
+</html>
